@@ -13,9 +13,7 @@ const kaClicked = () => {
 };
 
 const init = () => {
-    if (localStorage.getItem("language") === "en") enClicked();
-    else if (localStorage.getItem("language") === "ka") kaClicked();
-    else enClicked();
+    localStorage.getItem('language') === 'ka' ? kaClicked() : enClicked();
 };
 
 en.addEventListener("click", enClicked);
